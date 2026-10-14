@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Catatan Pemakai',
   description:
     'Tiga cerita dari toko buah, distributor antarkota, dan dapur kafe — keadaan sebelum, apa yang diubah, dan yang terlihat sesudah memakai EthyleneAbsorber.',
-  alternates: { canonical: 'https://absorber-premium.vercel.app/catatan' },
+  alternates: { canonical: 'https://absorber-premium.pintuweb.id/catatan' },
 };
 
 export default function CatatanIndex() {

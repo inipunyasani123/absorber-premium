@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { KOLEKSI } from "@/lib/koleksi";
 import { CERITA } from "@/lib/catatan";
 
-const BASE = "https://absorber-premium.vercel.app";
+const BASE = "https://absorber-premium.pintuweb.id";
 
 const routes: { path: string; priority: number }[] = [
   { path: "", priority: 1 },

@@ -2,7 +2,7 @@
 
 Landing page EthyleneAbsorber konsep "Premium": bersih dan meyakinkan, menonjolkan kualitas dan kealamian produk.
 
-**Demo live:** https://absorber-premium.vercel.app
+**Demo live:** https://absorber-premium.pintuweb.id
 
 ![Tangkapan layar EthyleneAbsorber](public/og.jpg)
 

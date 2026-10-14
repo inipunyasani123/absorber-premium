@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Etalase',
   description:
     'Empat produk PT Dickson Synergy dalam satu etalase: EthyleneAbsorber, Container Dry® II, Desi Pak®, dan Silica Gel.',
-  alternates: { canonical: 'https://absorber-premium.vercel.app/koleksi' },
+  alternates: { canonical: 'https://absorber-premium.pintuweb.id/koleksi' },
 };
 
 export default function EtalasePage() {

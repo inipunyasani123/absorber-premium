@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { KOLEKSI, barangBySlug } from '@/lib/koleksi';
 
-const SITE = 'https://absorber-premium.vercel.app';
+const SITE = 'https://absorber-premium.pintuweb.id';
 
 export function generateStaticParams() {
   return KOLEKSI.map((b) => ({ slug: b.slug }));
