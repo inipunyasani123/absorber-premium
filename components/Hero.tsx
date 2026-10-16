@@ -10,7 +10,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-bone pt-28 pb-16 md:pt-36 md:pb-20">
+    <section className="relative overflow-hidden bg-bone pt-28 pb-12 md:pt-36 md:pb-20">
       <div aria-hidden="true" className="hairlines absolute inset-0" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6">
@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
 
       {/* Gambar selebar bidang — dipotong 4:3 agar tanda air di sudut bawah tidak ikut */}
-      <div className="relative z-10 mt-14 px-6">
+      <div className="relative z-10 mt-10 px-6 md:mt-14">
         <div className="mx-auto max-w-6xl">
           <div className="relative aspect-[4/3] w-full overflow-hidden bg-bone-2 sm:aspect-[16/9]">
             <Image
@@ -63,8 +63,8 @@ export default function Hero() {
       </div>
 
       {/* Pita data */}
-      <div className="relative z-10 mx-auto mt-12 max-w-6xl px-6">
-        <dl className="grid gap-8 border-t border-ink/15 pt-8 sm:grid-cols-3">
+      <div className="relative z-10 mx-auto mt-8 max-w-6xl px-6 md:mt-12">
+        <dl className="grid grid-cols-3 gap-4 border-t border-ink/15 pt-7 sm:gap-8 sm:pt-8">
           {stats.map((s) => (
             <div key={s.label}>
               <dt className="sr-only">{s.label}</dt>

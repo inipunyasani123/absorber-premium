@@ -2,8 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { KOLEKSI, barangBySlug } from '@/lib/koleksi';
-
-const SITE = 'https://absorber-premium.pintuweb.id';
+import { meta, SITE } from '@/lib/seo';
 
 export function generateStaticParams() {
   return KOLEKSI.map((b) => ({ slug: b.slug }));
@@ -13,12 +12,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const b = barangBySlug(slug);
   if (!b) return {};
-  return {
-    title: b.nama,
-    description: `${b.kalimat} ${b.uraian}`,
-    alternates: { canonical: `${SITE}/koleksi/${b.slug}` },
-    openGraph: { images: [{ url: b.image }] },
-  };
+  // Kalimat pembuka + kalimat pertama uraian, dijaga ≤155 karakter oleh meta().
+  return meta({ title: b.nama, description: `${b.kalimat} ${b.uraian.split('. ')[0]}.`, path: `/koleksi/${b.slug}` });
 }
 
 export default async function BarangPage({ params }: { params: Promise<{ slug: string }> }) {

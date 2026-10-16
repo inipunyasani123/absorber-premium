@@ -1,9 +1,9 @@
 /* ============================================================================
-   "Catatan Pemakai" — cerita kasus konsep Premium. Tiga pemakai yang
-   suaranya muncul di beranda, dituliskan lebih panjang seperti artikel
-   majalah: keadaan sebelum, apa yang diubah, dan yang terlihat sesudahnya.
-   Nama dan usaha adalah ilustrasi untuk purwarupa desain; angka hari
-   mengikuti rentang di brief (hari ke-3 → hari ke-7, 2–3× lebih lama).
+   "Catatan Penerapan" — tiga skenario konsep Premium, ditulis seperti artikel
+   majalah: keadaan yang umum, apa yang diubah, dan apa yang bisa diharapkan.
+   Ini skenario, bukan cerita pelanggan: tanpa nama orang, nama usaha, potret,
+   atau kutipan. Angka hanya dari brief/FAQ (1 sachet untuk 1–2 m³, 24–48 jam,
+   hari ke-3 → ke-7, 30 hari masa efektif, pelayaran laut 3–4 minggu).
    ========================================================================== */
 
 export type Cerita = {
@@ -11,12 +11,10 @@ export type Cerita = {
   no: string
   judul: string
   ringkas: string
-  nama: string
-  peran: string
-  potret: string
+  tempat: string
   image: string
   angka: [string, string][]
-  isi: ({ p: string } | { h: string } | { kutip: string })[]
+  isi: ({ p: string } | { h: string } | { inti: string })[]
 }
 
 export const CERITA: Cerita[] = [
@@ -24,57 +22,51 @@ export const CERITA: Cerita[] = [
     slug: 'rak-yang-tidak-perlu-disortir-sore',
     no: '01',
     judul: 'Rak yang tidak perlu disortir sore hari',
-    ringkas: 'Toko buah dengan dua kali sortir setiap hari kini cukup sekali — dan yang dibuang jauh berkurang.',
-    nama: 'Relya Nesya',
-    peran: 'FreshFruit Market, toko buah',
-    potret: '/images/pp1.png',
+    ringkas: 'Skenario toko buah: sachet dipasang di peti gudang belakang, tempat stok menunggu sebelum dipajang.',
+    tempat: 'Toko buah · gudang belakang',
     image: '/images/l2.webp',
-    angka: [['Sortir per hari', '2× → 1×'], ['Layak jual', 'hari ke-3 → ke-7'], ['Dipasang di', 'gudang belakang']],
+    angka: [['Dipasang di', 'peti gudang belakang'], ['Dosis', '1 sachet / 1–2 m³'], ['Diperiksa', 'warna indikator']],
     isi: [
-      { p: 'Setiap sore pukul empat, dua karyawan FreshFruit Market berhenti melayani pembeli untuk menyortir rak. Pisang yang mulai berbintik dipisahkan, mangga yang melunak dipotong harganya, sisanya dibuang. Pekerjaan itu memakan satu jam — setiap hari.' },
+      { p: 'Di banyak toko buah, sortir sore adalah rutinitas: pisang yang mulai berbintik dipisahkan, mangga yang melunak dipotong harganya, sisanya dibuang. Sebagian besar kerusakan itu tidak bermula di rak pajang, melainkan di gudang belakang — ruang tertutup tempat stok menunggu beberapa hari sebelum dipajang.' },
       { h: 'Yang diubah' },
-      { p: 'Sachet tidak dipasang di rak pajang, melainkan di peti-peti gudang belakang tempat stok menunggu dua sampai empat hari sebelum dipajang. Di sanalah etilen menumpuk paling banyak, karena ruangnya tertutup dan penuh buah klimakterik.' },
-      { kutip: 'Buah di toko bertahan lima sampai tujuh hari lebih lama. Penyortiran sore yang dulu rutin, sekarang hampir tidak perlu.' },
-      { h: 'Yang terlihat sesudahnya' },
-      { p: 'Buah yang dulu mulai menunjukkan tanda pembusukan pada hari ketiga kini masih layak jual hingga hari ketujuh. Sortir sore berubah menjadi sortir pagi saja. Yang paling terasa, kata Relya, justru bukan angka buangan — melainkan satu jam karyawan yang kembali ke kasir.' },
+      { p: 'Sachet tidak dipasang di rak pajang yang terbuka, melainkan di peti-peti gudang. Di sanalah etilen menumpuk paling banyak, karena ruangnya tertutup dan penuh buah klimakterik seperti pisang dan mangga. Jumlahnya dihitung dari volume ruang: satu sachet untuk 1–2 m³.' },
+      { inti: 'Pasang sachet di tempat buah menunggu, bukan di tempat buah dipajang.' },
+      { h: 'Yang bisa diharapkan' },
+      { p: 'Perbedaan mulai tampak dalam 24–48 jam pertama. Buah yang biasanya menunjukkan tanda pembusukan pada hari ketiga umumnya masih layak hingga hari ketujuh atau lebih, bergantung pada jenis dan kondisinya. Warna indikator memberi tahu kapan sachet perlu diganti: ungu masih bekerja, cokelat berarti jenuh.' },
     ],
   },
   {
     slug: 'pengiriman-luar-kota-tanpa-taruhan',
     no: '02',
     judul: 'Pengiriman luar kota yang tidak lagi jadi taruhan',
-    ringkas: 'Distributor buah antarkota yang dulu menghitung "susut perjalanan" sebagai biaya tetap.',
-    nama: 'Ani Wijaya',
-    peran: 'BuahSegar Distribusi, distributor antarkota',
-    potret: '/images/pp2.png',
+    ringkas: 'Skenario distributor antarkota: dosis dihitung dari volume bak truk, warna indikator dicatat di gudang tujuan.',
+    tempat: 'Distributor · bak truk',
     image: '/images/buahsegar2.webp',
-    angka: [['Rute', 'darat 2–4 hari'], ['Dosis', '1 sachet / 1–2 m³'], ['Diperiksa di', 'gudang tujuan']],
+    angka: [['Dasar dosis', 'volume bak, bukan berat'], ['Dosis', '1 sachet / 1–2 m³'], ['Diperiksa di', 'gudang tujuan']],
     isi: [
-      { p: 'Dalam pembukuan BuahSegar Distribusi, ada satu baris yang tidak pernah kosong: susut perjalanan. Setiap truk yang berangkat membawa perkiraan bahwa sebagian muatan akan tiba terlalu matang untuk dijual dengan harga penuh.' },
+      { p: 'Bagi distributor antarkota, susut perjalanan sering dicatat sebagai biaya tetap: setiap truk berangkat dengan perkiraan bahwa sebagian muatan akan tiba terlalu matang untuk dijual dengan harga penuh.' },
       { h: 'Yang diubah' },
-      { p: 'Perhitungan dosis dimulai dari volume bak truk, bukan berat muatan. Sachet diletakkan di sela peti, tidak di dasar tumpukan, dan kemasan luar dibuka tepat sebelum pemuatan. Di gudang tujuan, petugas mencatat warna indikator sebagai data untuk pengiriman berikutnya.' },
-      { kutip: 'Pengiriman ke luar kota tidak lagi jadi taruhan. Barang sampai dalam kondisi yang masih bisa saya banggakan.' },
-      { h: 'Yang terlihat sesudahnya' },
-      { p: 'Baris susut perjalanan tidak hilang, tetapi mengecil sampai tidak lagi dihitung sebagai biaya tetap. Catatan warna indikator juga memberi sesuatu yang dulu tidak ada: bukti tertulis untuk menjawab keluhan penerima.' },
+      { p: 'Perhitungan dosis dimulai dari volume bak truk, bukan berat muatan. Sachet diletakkan di sela peti — tidak di dasar tumpukan — dan kemasan luarnya dibuka tepat sebelum pemuatan, karena reaksinya dimulai begitu terpapar udara.' },
+      { inti: 'Volume ruang, bukan berat muatan, yang menentukan jumlah sachet.' },
+      { h: 'Yang bisa diharapkan' },
+      { p: 'Di gudang tujuan, warna indikator dicatat untuk setiap pengiriman. Catatan itu menjadi dasar dosis rute berikutnya: bila sachet sudah cokelat merata saat tiba, dosisnya perlu dinaikkan. Untuk ekspor laut 3–4 minggu pun, pelayaran selesai sebelum batas 30 hari masa efektif sachet.' },
     ],
   },
   {
     slug: 'mutu-yang-sama-setiap-pagi',
     no: '03',
     judul: 'Mutu yang sama setiap pagi',
-    ringkas: 'Dapur kafe yang membutuhkan buah dengan kematangan seragam untuk jus dan saji harian.',
-    nama: 'Rina Permata',
-    peran: 'The Green Cafe, dapur & bar jus',
-    potret: '/images/pp3.png',
+    ringkas: 'Skenario dapur kafe: buah disimpan di lemari tertutup bersama sachet, penghasil etilen dipisah dari yang peka.',
+    tempat: 'Dapur kafe · lemari buah',
     image: '/images/l3.webp',
-    angka: [['Belanja buah', '2× seminggu'], ['Disimpan di', 'lemari buah tertutup'], ['Tujuan', 'rasa yang sama tiap hari']],
+    angka: [['Disimpan di', 'lemari buah tertutup'], ['Dipisah', 'penghasil vs peka etilen'], ['Tujuan', 'kematangan seragam']],
     isi: [
-      { p: 'Bagi dapur, masalahnya bukan buah yang busuk, melainkan buah yang tidak seragam. Mangga yang terlalu matang membuat jus terlalu manis; yang belum matang membuatnya asam. Pelanggan tetap langsung merasakan bedanya.' },
+      { p: 'Bagi dapur, masalahnya sering bukan buah yang busuk, melainkan buah yang tidak seragam. Mangga yang terlalu matang membuat jus terlalu manis; yang belum matang membuatnya asam — dan pelanggan tetap langsung merasakan bedanya.' },
       { h: 'Yang diubah' },
-      { p: 'Buah dibeli dua kali seminggu dan disimpan di lemari buah tertutup dengan sachet di rak paling atas. Pisang dan mangga — penghasil etilen — dipisahkan dari stroberi dan jeruk yang masalahnya lebih ke kelembapan.' },
-      { kutip: 'Dapur kami butuh mutu yang sama tiap hari. Selisih antar pengiriman jauh lebih kecil sejak memakai sachet ini.' },
-      { h: 'Yang terlihat sesudahnya' },
-      { p: 'Buah yang dibeli hari Senin masih punya kematangan yang mirip pada hari Kamis. Resep tidak perlu disesuaikan setiap pagi, dan yang paling penting bagi Rina: pelanggan berhenti bertanya kenapa rasanya beda.' },
+      { p: 'Buah disimpan di lemari tertutup dengan sachet di rak paling atas. Pisang dan mangga — penghasil etilen — dipisahkan dari stroberi dan jeruk, yang lebih dipengaruhi suhu dan kelembapan daripada etilen.' },
+      { inti: 'Pisahkan penghasil etilen dari yang peka; sachet menjaga udara di antaranya.' },
+      { h: 'Yang bisa diharapkan' },
+      { p: 'Sachet tidak mengubah rasa, aroma, maupun tekstur — uji organoleptik tidak menemukan perbedaannya. Yang melambat adalah pematangan, sehingga buah yang dibeli di awal pekan tidak menyusul matang bersamaan dan resep tidak perlu disesuaikan setiap pagi.' },
     ],
   },
 ]

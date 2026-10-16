@@ -13,7 +13,7 @@ const display = Figtree({
   display: "swap",
 })
 
-const __jsonld = {"@context":"https://schema.org","@type":"CreativeWork","name":"EthyleneAbsorber — Konsep Premium","description":"Landing page produk ethylene absorber","url":"https://absorber-premium.pintuweb.id"};
+const __jsonld = {"@context":"https://schema.org","@type":"CreativeWork","name":"EthyleneAbsorber — Konsep Premium","description":"Konsep desain situs produk ethylene absorber bergaya etalase, dibuat untuk kontes brief PT Dickson Synergy","url":"https://absorber-premium.pintuweb.id"};
 
 export const metadata = {
   metadataBase: new URL("https://absorber-premium.pintuweb.id"),
@@ -21,7 +21,7 @@ export const metadata = {
     default: "EthyleneAbsorber — Konsep Premium | Dickson Synergy",
     template: "%s — PT Dickson Synergy",
   },
-  description: "Landing page EthyleneAbsorber konsep \"Premium\": bersih dan meyakinkan, menonjolkan kualitas dan kealamian produk.",
+  description: "Konsep situs EthyleneAbsorber bergaya etalase butik: empat produk PT Dickson Synergy, tiga standar mutu, dan sachet penyerap etilen terdaftar BPOM RI.",
   applicationName: "EthyleneAbsorber",
   keywords: ["ethylene absorber", "kesegaran buah", "landing page premium", "desain web"],
   authors: [{ name: "EthyleneAbsorber" }],
@@ -32,15 +32,15 @@ export const metadata = {
     type: "website",
     locale: "id_ID",
     url: "https://absorber-premium.pintuweb.id",
-    siteName: "EthyleneAbsorber",
+    siteName: "EthyleneAbsorber · PT Dickson Synergy",
     title: "EthyleneAbsorber — Konsep Premium | Dickson Synergy",
-    description: "Landing page EthyleneAbsorber konsep \"Premium\": bersih dan meyakinkan, menonjolkan kualitas dan kealamian produk.",
+    description: "Konsep situs EthyleneAbsorber bergaya etalase butik: empat produk PT Dickson Synergy, tiga standar mutu, dan sachet penyerap etilen terdaftar BPOM RI.",
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "EthyleneAbsorber — Konsep Premium | Dickson Synergy" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "EthyleneAbsorber — Konsep Premium | Dickson Synergy",
-    description: "Landing page EthyleneAbsorber konsep \"Premium\": bersih dan meyakinkan, menonjolkan kualitas dan kealamian produk.",
+    description: "Konsep situs EthyleneAbsorber bergaya etalase butik: empat produk PT Dickson Synergy, tiga standar mutu, dan sachet penyerap etilen terdaftar BPOM RI.",
     images: ["/og.jpg"],
   },
   robots: {

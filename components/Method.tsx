@@ -20,17 +20,17 @@ export default function Method() {
     <section id="cara-kerja" className="relative overflow-hidden bg-ink text-bone">
       <div aria-hidden="true" className="hairlines-dark absolute inset-0" />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-28">
         <SectionHead
           no="02"
           tag="Cara Kerja"
           tone="dark"
           title="Satu reaksi kimia, empat langkah, tanpa bagian bergerak"
           lead="Bukan pengawet dan tidak menempel pada buah. Yang dikerjakannya hanya membersihkan udara di dalam kemasan."
-          className="mb-16"
+          className="mb-10 md:mb-16"
         />
 
-        <ol className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <ol className="grid grid-cols-2 gap-x-6 gap-y-8 sm:gap-10 lg:grid-cols-4">
           {steps.map((s) => (
             <li key={s.no} className="border-t border-bone/25 pt-6">
               <span aria-hidden="true" className="numeral block text-bone">
@@ -43,16 +43,16 @@ export default function Method() {
         </ol>
 
         {/* Register sertifikasi */}
-        <div className="mt-20 border-t border-bone/25 pt-10">
+        <div className="mt-12 border-t border-bone/25 pt-10 md:mt-20">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
             <div className="max-w-sm">
-              <p className="tag mb-3 text-sage">Kepatuhan</p>
+              <p className="tag mb-3 text-sage-soft">Kepatuhan</p>
               <h3 className="text-xl leading-snug font-semibold text-bone">
                 Diperiksa empat otoritas keamanan pangan
               </h3>
             </div>
 
-            <dl className="grid flex-1 gap-x-10 gap-y-7 sm:grid-cols-2 lg:max-w-2xl lg:grid-cols-4">
+            <dl className="grid flex-1 grid-cols-2 gap-x-10 gap-y-7 lg:max-w-2xl lg:grid-cols-4">
               {marks.map(([k, v]) => (
                 <div key={k}>
                   <dt className="text-sm font-semibold text-bone">{k}</dt>
@@ -64,7 +64,7 @@ export default function Method() {
 
           <Link
             href="/faq"
-            className="mt-10 inline-block text-sm font-semibold text-sage underline-offset-8 hover:underline"
+            className="mt-10 inline-block text-sm font-semibold text-sage-soft underline-offset-8 hover:underline"
           >
             Pertanyaan teknis selengkapnya →
           </Link>

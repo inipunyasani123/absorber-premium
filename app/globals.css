@@ -15,6 +15,7 @@
   --color-bone-2: #e7e3dc;
   --color-sage: #4a6b57; /* satu-satunya aksen warna */
   --color-sage-deep: #35503f;
+  --color-sage-soft: #8fb39c; /* sage untuk teks di atas arang — kontras 7,7:1 */
 
   --font-sans: var(--font-display), ui-sans-serif, system-ui, sans-serif;
 }
@@ -52,9 +53,12 @@ h3 {
   line-height: 0.82;
   font-weight: 700;
   letter-spacing: -0.05em;
-  color: transparent;
-  -webkit-text-stroke: 1px currentColor;
-  opacity: 0.35;
+  /* Isi dibuat bening lewat text-fill-color, BUKAN color: transparent —
+     kalau color yang dibuat bening, currentColor ikut bening dan garis
+     tepinya lenyap (angka beroutline dulu tidak pernah tampil). */
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.25px currentColor;
+  opacity: 0.45;
 }
 
 /* --------------------------------------------------------------------------

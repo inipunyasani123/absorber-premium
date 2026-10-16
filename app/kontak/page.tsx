@@ -5,11 +5,13 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Check } from 'lucide-react'
 
-const saluran = [
-  ['Telepon', '+62 812 3456 7890', 'tel:+628123456789', 'Jalur tercepat pada jam kerja'],
-  ['Surel', 'info@ethyleneabsorber.com', 'mailto:info@ethyleneabsorber.com', 'Dibalas dalam 1–2 jam kerja'],
-  ['Kantor', 'Jl. Teknologi No. 123, Bandung 40234', '', 'Kunjungan dengan janji temu'],
-  ['Jam Kerja', 'Sen–Jum 08.00–17.00', '', 'Sabtu 08.00–12.00'],
+/* Yang kembali setelah formulir dikirim. Telepon, surel, alamat, dan jam
+   kerja yang dulu tertulis di sini karangan — kanal resmi klien belum ada. */
+const kembali = [
+  ['Perhitungan', 'Jumlah sachet tertulis', 'Dari volume ruang: 1 sachet untuk 1–2 m³.'],
+  ['Sample', 'Untuk diuji di tempat Anda', 'Satu peti bersachet, satu peti pembanding.'],
+  ['Lembar data', 'Spesifikasi & registrasi', 'BPOM RI NA18191100273 dan standar kontak pangan.'],
+  ['Acuan', 'Kontainer 20 ft ± 33 m³', '40 ft ± 67 m³ · 40 ft HC ± 76 m³.'],
 ]
 
 export default function KontakPage() {
@@ -37,23 +39,15 @@ export default function KontakPage() {
       <header className="relative overflow-hidden bg-ink text-bone">
         <div aria-hidden="true" className="hairlines-dark absolute inset-0" />
         <div className="relative z-10 mx-auto max-w-6xl px-6 pt-32 pb-16 md:pt-40 md:pb-20">
-          <p className="tag mb-6 text-sage">Permintaan Sample</p>
+          <p className="tag mb-6 text-sage-soft">Permintaan Sample</p>
           <h1 className="max-w-3xl text-[2.4rem] leading-[1.02] font-semibold tracking-[-0.04em] sm:text-5xl lg:text-[4rem]">
             Sebutkan muatannya, kami hitung dosisnya.
           </h1>
-          <dl className="mt-14 grid gap-8 border-t border-bone/25 pt-8 sm:grid-cols-2 lg:grid-cols-4">
-            {saluran.map(([label, value, href, note]) => (
+          <dl className="mt-12 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-bone/25 pt-8 lg:mt-14 lg:grid-cols-4">
+            {kembali.map(([label, value, note]) => (
               <div key={label}>
                 <dt className="tag text-bone/75">{label}</dt>
-                <dd className="mt-2 text-sm font-semibold text-bone">
-                  {href ? (
-                    <a href={href} className="break-all transition-colors hover:text-sage">
-                      {value}
-                    </a>
-                  ) : (
-                    value
-                  )}
-                </dd>
+                <dd className="mt-2 text-sm font-semibold text-bone">{value}</dd>
                 <dd className="mt-1.5 text-[0.8125rem] leading-relaxed text-bone/75">{note}</dd>
               </div>
             ))}

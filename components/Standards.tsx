@@ -41,7 +41,7 @@ const standards = [
 
 export default function Standards() {
   return (
-    <section id="standar" className="relative overflow-hidden bg-bone py-20 md:py-28">
+    <section id="standar" className="relative overflow-hidden bg-bone py-14 md:py-28">
       <div aria-hidden="true" className="hairlines absolute inset-0" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6">
@@ -50,18 +50,18 @@ export default function Standards() {
           tag="Standar"
           title="Tiga titik yang menentukan sampai atau tidaknya sebuah kiriman"
           lead="Kerusakan jarang terjadi sekaligus. Ia menumpuk sedikit demi sedikit di tiga titik ini — dan di ketiganya pula sachet bekerja."
-          className="mb-20"
+          className="mb-12 md:mb-20"
         />
 
-        <div className="space-y-20 md:space-y-28">
+        <div className="space-y-14 md:space-y-28">
           {standards.map((s, i) => (
             <article
               key={s.no}
-              className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
+              className={`grid items-center gap-7 md:gap-10 lg:grid-cols-2 lg:gap-16 ${
                 i % 2 === 1 ? 'lg:[&>figure]:order-2' : ''
               }`}
             >
-              <figure className="relative aspect-[4/3] w-full overflow-hidden bg-bone-2">
+              <figure className="relative aspect-[16/10] w-full overflow-hidden bg-bone-2 sm:aspect-[4/3]">
                 <Image
                   src={s.image}
                   alt={s.title}
@@ -72,7 +72,7 @@ export default function Standards() {
               </figure>
 
               <div>
-                <div className="mb-6 flex items-baseline gap-5">
+                <div className="mb-4 flex items-baseline gap-5 md:mb-6">
                   <span aria-hidden="true" className="numeral text-ink">
                     {s.no}
                   </span>
@@ -84,7 +84,7 @@ export default function Standards() {
                 </h3>
                 <p className="mt-4 leading-relaxed text-ink-soft">{s.desc}</p>
 
-                <dl className="mt-8 grid grid-cols-2 gap-6 border-t border-ink/15 pt-6">
+                <dl className="mt-6 grid grid-cols-2 gap-6 border-t border-ink/15 pt-5 md:mt-8 md:pt-6">
                   {s.facts.map(([k, v]) => (
                     <div key={k}>
                       <dt className="tag text-ink-soft">{k}</dt>

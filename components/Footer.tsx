@@ -4,7 +4,7 @@ const nav = [
   { label: 'Standar', href: '/#standar' },
   { label: 'Cara Kerja', href: '/#cara-kerja' },
   { label: 'Etalase', href: '/koleksi' },
-  { label: 'Catatan Pemakai', href: '/catatan' },
+  { label: 'Catatan Penerapan', href: '/catatan' },
   { label: 'Tanya Jawab', href: '/faq' },
   { label: 'Hubungi Kami', href: '/kontak' },
 ]
@@ -29,10 +29,10 @@ export default function Footer() {
       <div aria-hidden="true" className="hairlines-dark absolute inset-0" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 pt-16 pb-10">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-4">
           <div>
             <p className="text-[0.95rem] font-semibold tracking-tight text-bone">
-              Ethylene<span className="text-sage">Absorber</span>
+              Ethylene<span className="text-sage-soft">Absorber</span>
             </p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-bone/75">
               Sachet penyerap etilen dan desiccant untuk rantai pasok komoditas segar. Dipasok oleh
@@ -42,10 +42,10 @@ export default function Footer() {
 
           <nav aria-label="Navigasi footer">
             <h2 className="tag mb-5 text-bone">Navigasi</h2>
-            <ul className="space-y-3">
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:block sm:space-y-3">
               {nav.map((n) => (
                 <li key={n.href}>
-                  <Link href={n.href} className="text-sm transition-colors hover:text-sage">
+                  <Link href={n.href} className="text-sm transition-colors hover:text-sage-soft">
                     {n.label}
                   </Link>
                 </li>
@@ -55,7 +55,7 @@ export default function Footer() {
 
           <div>
             <h2 className="tag mb-5 text-bone">Standar</h2>
-            <dl className="space-y-3.5">
+            <dl className="grid grid-cols-2 gap-x-6 gap-y-3.5 sm:block sm:space-y-3.5">
               {standards.map(([k, v]) => (
                 <div key={k}>
                   <dt className="text-sm text-bone/75">{k}</dt>
@@ -66,28 +66,16 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="tag mb-5 text-bone">Hubungi</h2>
-            <ul className="space-y-4 text-sm">
-              <li>
-                <span className="tag block text-bone/75">Telepon</span>
-                <a href="tel:+628123456789" className="transition-colors hover:text-sage">
-                  +62 812 3456 7890
-                </a>
-              </li>
-              <li>
-                <span className="tag block text-bone/75">Surel</span>
-                <a
-                  href="mailto:info@ethyleneabsorber.com"
-                  className="break-all transition-colors hover:text-sage"
-                >
-                  info@ethyleneabsorber.com
-                </a>
-              </li>
-              <li>
-                <span className="tag block text-bone/75">Alamat</span>
-                <span className="leading-relaxed">Jl. Teknologi No. 123, Bandung 40234</span>
-              </li>
-            </ul>
+            <h2 className="tag mb-5 text-bone">Permintaan</h2>
+            <p className="max-w-xs text-sm leading-relaxed text-bone/75">
+              Sample dan perhitungan dosis lewat satu formulir: komoditas, volume ruang, dan rute.
+            </p>
+            <Link
+              href="/kontak"
+              className="mt-6 inline-flex items-center justify-center border border-bone/40 px-5 py-3 text-sm font-semibold text-bone transition-colors hover:border-bone hover:bg-bone hover:text-ink"
+            >
+              Minta Sample
+            </Link>
           </div>
         </div>
 
@@ -95,7 +83,7 @@ export default function Footer() {
           <p className="tag text-bone/75">© {tahun} PT Dickson Synergy</p>
           <div className="flex gap-7">
             {legal.map((l) => (
-              <Link key={l.href} href={l.href} className="text-sm transition-colors hover:text-sage">
+              <Link key={l.href} href={l.href} className="text-sm transition-colors hover:text-sage-soft">
                 {l.label}
               </Link>
             ))}

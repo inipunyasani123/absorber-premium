@@ -26,8 +26,8 @@ export function SectionHead({
   className?: string;
 }) {
   const titleColor = tone === 'dark' ? 'text-bone' : 'text-ink';
-  const leadColor = tone === 'dark' ? 'text-bone/65' : 'text-ink-soft';
-  const tagColor = tone === 'dark' ? 'text-sage' : 'text-sage';
+  const leadColor = tone === 'dark' ? 'text-bone/75' : 'text-ink-soft';
+  const tagColor = tone === 'dark' ? 'text-sage-soft' : 'text-sage';
 
   return (
     <div className={`grid gap-8 md:grid-cols-[auto_minmax(0,1fr)] md:gap-12 ${className}`}>
@@ -63,13 +63,13 @@ export function Stat({
   return (
     <div>
       <div
-        className={`text-[1.9rem] leading-none font-semibold tracking-tight ${
+        className={`text-[1.4rem] leading-none font-semibold tracking-tight sm:text-[1.9rem] ${
           tone === 'dark' ? 'text-bone' : 'text-ink'
         }`}
       >
         {value}
       </div>
-      <div className={`tag mt-3 ${tone === 'dark' ? 'text-bone/75' : 'text-ink-soft'}`}>
+      <div className={`tag mt-3 leading-[1.5] ${tone === 'dark' ? 'text-bone/75' : 'text-ink-soft'}`}>
         {label}
       </div>
     </div>

@@ -2,8 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CERITA, ceritaBySlug } from '@/lib/catatan';
-
-const SITE = 'https://absorber-premium.pintuweb.id';
+import { meta, SITE } from '@/lib/seo';
 
 export function generateStaticParams() {
   return CERITA.map((c) => ({ slug: c.slug }));
@@ -13,12 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const c = ceritaBySlug(slug);
   if (!c) return {};
-  return {
-    title: `${c.judul} — Catatan Pemakai`,
-    description: c.ringkas,
-    alternates: { canonical: `${SITE}/catatan/${c.slug}` },
-    openGraph: { type: 'article', images: [{ url: c.image }] },
-  };
+  return meta({ title: c.judul, description: c.ringkas, path: `/catatan/${c.slug}`, type: 'article' });
 }
 
 export default async function CeritaPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -43,7 +37,7 @@ export default async function CeritaPage({ params }: { params: Promise<{ slug: s
       <header className="pt-28 sm:pt-32">
         <div className="mx-auto max-w-6xl px-6">
           <nav aria-label="Remah roti" className="tag text-ink-soft">
-            <Link href="/catatan" className="hover:text-ink">Catatan Pemakai</Link> <span aria-hidden="true">/</span> {c.no}
+            <Link href="/catatan" className="hover:text-ink">Catatan Penerapan</Link> <span aria-hidden="true">/</span> {c.no}
           </nav>
           <h1 className="mt-8 max-w-4xl text-[2.5rem] leading-[1.03] font-semibold tracking-[-0.04em] text-ink sm:text-5xl lg:text-[3.8rem]">{c.judul}</h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">{c.ringkas}</p>
@@ -63,24 +57,21 @@ export default async function CeritaPage({ params }: { params: Promise<{ slug: s
         </div>
       </header>
 
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[14rem_minmax(0,1fr)] md:py-20">
+      <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-[14rem_minmax(0,1fr)] md:gap-12 md:py-20">
         <aside className="md:sticky md:top-28 md:self-start">
-          <span className="relative block h-24 w-24 overflow-hidden bg-bone-2">
-            <Image src={c.potret} alt={`Potret ${c.nama}`} fill sizes="96px" className="object-cover object-top" />
-          </span>
-          <p className="mt-4 font-semibold text-ink">{c.nama}</p>
-          <p className="text-sm text-ink-soft">{c.peran}</p>
-          <p className="tag mt-6 leading-[1.6] text-ink-soft">Ilustrasi untuk purwarupa desain</p>
+          <p className="tag text-ink-soft">Tempat</p>
+          <p className="mt-2 font-semibold text-ink">{c.tempat}</p>
+          <p className="tag mt-6 leading-[1.6] text-ink-soft">Skenario ilustrasi — bukan cerita pelanggan</p>
         </aside>
 
         <div className="max-w-2xl">
           {c.isi.map((b, k) =>
             'h' in b ? (
               <h2 key={k} className="mt-12 text-2xl font-semibold text-ink first:mt-0">{b.h}</h2>
-            ) : 'kutip' in b ? (
-              <blockquote key={k} className="my-12 border-l-2 border-sage pl-6 text-[1.6rem] leading-snug font-semibold tracking-tight text-ink md:text-[1.9rem]">
-                &ldquo;{b.kutip}&rdquo;
-              </blockquote>
+            ) : 'inti' in b ? (
+              <p key={k} className="my-10 border-l-2 border-sage pl-6 text-[1.45rem] leading-snug font-semibold tracking-tight text-ink md:my-12 md:text-[1.9rem]">
+                {b.inti}
+              </p>
             ) : (
               <p key={k} className="mt-5 text-[1.075rem] leading-[1.85] text-ink-soft first:mt-0">{b.p}</p>
             ),

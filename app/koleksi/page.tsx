@@ -2,13 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import EtalaseHead from '@/components/EtalaseHead';
 import { KOLEKSI } from '@/lib/koleksi';
+import { meta } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = meta({
   title: 'Etalase',
   description:
-    'Empat produk PT Dickson Synergy dalam satu etalase: EthyleneAbsorber, Container Dry® II, Desi Pak®, dan Silica Gel.',
-  alternates: { canonical: 'https://absorber-premium.pintuweb.id/koleksi' },
-};
+    'Empat produk PT Dickson Synergy dalam satu etalase: EthyleneAbsorber, Container Dry® II, Desi Pak®, dan Silica Gel — dengan spesifikasi singkatnya.',
+  path: '/koleksi',
+});
 
 export default function EtalasePage() {
   return (
