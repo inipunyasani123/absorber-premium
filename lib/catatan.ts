@@ -24,7 +24,7 @@ export const CERITA: Cerita[] = [
     judul: 'Rak yang tidak perlu disortir sore hari',
     ringkas: 'Skenario toko buah: sachet dipasang di peti gudang belakang, tempat stok menunggu sebelum dipajang.',
     tempat: 'Toko buah · gudang belakang',
-    image: '/images/l2.webp',
+    image: '/images/foto/catatan-toko.webp',
     angka: [['Dipasang di', 'peti gudang belakang'], ['Dosis', '1 sachet / 1–2 m³'], ['Diperiksa', 'warna indikator']],
     isi: [
       { p: 'Di banyak toko buah, sortir sore adalah rutinitas: pisang yang mulai berbintik dipisahkan, mangga yang melunak dipotong harganya, sisanya dibuang. Sebagian besar kerusakan itu tidak bermula di rak pajang, melainkan di gudang belakang — ruang tertutup tempat stok menunggu beberapa hari sebelum dipajang.' },
@@ -41,7 +41,7 @@ export const CERITA: Cerita[] = [
     judul: 'Pengiriman luar kota yang tidak lagi jadi taruhan',
     ringkas: 'Skenario distributor antarkota: dosis dihitung dari volume bak truk, warna indikator dicatat di gudang tujuan.',
     tempat: 'Distributor · bak truk',
-    image: '/images/buahsegar2.webp',
+    image: '/images/foto/catatan-truk.webp',
     angka: [['Dasar dosis', 'volume bak, bukan berat'], ['Dosis', '1 sachet / 1–2 m³'], ['Diperiksa di', 'gudang tujuan']],
     isi: [
       { p: 'Bagi distributor antarkota, susut perjalanan sering dicatat sebagai biaya tetap: setiap truk berangkat dengan perkiraan bahwa sebagian muatan akan tiba terlalu matang untuk dijual dengan harga penuh.' },
@@ -58,7 +58,7 @@ export const CERITA: Cerita[] = [
     judul: 'Mutu yang sama setiap pagi',
     ringkas: 'Skenario dapur kafe: buah disimpan di lemari tertutup bersama sachet, penghasil etilen dipisah dari yang peka.',
     tempat: 'Dapur kafe · lemari buah',
-    image: '/images/l3.webp',
+    image: '/images/foto/catatan-dapur.webp',
     angka: [['Disimpan di', 'lemari buah tertutup'], ['Dipisah', 'penghasil vs peka etilen'], ['Tujuan', 'kematangan seragam']],
     isi: [
       { p: 'Bagi dapur, masalahnya sering bukan buah yang busuk, melainkan buah yang tidak seragam. Mangga yang terlalu matang membuat jus terlalu manis; yang belum matang membuatnya asam — dan pelanggan tetap langsung merasakan bedanya.' },

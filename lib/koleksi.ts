@@ -21,7 +21,7 @@ export const KOLEKSI: Barang[] = [
     slug: 'ethyleneabsorber',
     no: '01',
     nama: 'EthyleneAbsorber',
-    image: '/images/sachet-buah.webp',
+    image: '/images/etalase/etalase-sachet.webp',
     kelas: 'Etilen',
     kalimat: 'Menahan pesan pematangan, agar buah tiba seperti saat dipetik.',
     uraian:
@@ -39,7 +39,7 @@ export const KOLEKSI: Barang[] = [
     slug: 'container-dry-ii',
     no: '02',
     nama: 'Container Dry® II',
-    image: '/images/container.webp',
+    image: '/images/etalase/etalase-container.webp',
     kelas: 'Kelembapan',
     kalimat: 'Kontainer tetap kering, kardus tetap tegak.',
     uraian:
@@ -56,7 +56,7 @@ export const KOLEKSI: Barang[] = [
     slug: 'desi-pak',
     no: '03',
     nama: 'Desi Pak®',
-    image: '/images/desi.webp',
+    image: '/images/etalase/etalase-desipak.webp',
     kelas: 'Kelembapan',
     kalimat: 'Tanah liat alami, untuk kemasan yang lebih kecil.',
     uraian:
@@ -73,7 +73,7 @@ export const KOLEKSI: Barang[] = [
     slug: 'silica-gel',
     no: '04',
     nama: 'Silica Gel',
-    image: '/images/silika.webp',
+    image: '/images/etalase/etalase-silika.webp',
     kelas: 'Kelembapan',
     kalimat: 'Untuk barang yang tidak boleh lembap sedikit pun.',
     uraian:

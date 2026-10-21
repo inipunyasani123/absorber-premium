@@ -25,6 +25,10 @@ Konsep "Premium" dengan bahasa rupa **Etalase** butik. Mutu ditunjukkan lewat ke
 - Font: Figtree (next/font)
 - SEO: metadata per halaman, Open Graph, JSON-LD, sitemap.xml, dan robots.txt
 
+## Gambar
+
+Foto CC0 dari WordPress Photo Directory; kemasan produk digambar ulang sendiri (`scripts/ilustrasi/etalase-produk.mjs`). Daftar lengkap: [`public/images/SUMBER.md`](public/images/SUMBER.md).
+
 ## Menjalankan secara lokal
 
 ```bash

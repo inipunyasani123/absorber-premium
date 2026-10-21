@@ -9,7 +9,8 @@ const standards = [
     tag: 'Sebelum berangkat',
     title: 'Dosis dihitung dari volume, bukan dari berat',
     desc: 'Satu sachet merawat ruang 1–2 m³. Untuk kontainer 20 ft maupun 40 ft, jumlahnya disesuaikan dengan kepadatan susunan peti dan jenis komoditas — dihitung tertulis sebelum pengiriman pertama.',
-    image: '/images/sachet-buah.webp',
+    image: '/images/foto/standar-kemas.webp',
+    alt: 'Apel dalam kotak kemas sebelum dikirim',
     facts: [
       ['Cakupan', '1–2 m³'],
       ['Ruang', 'Harus tertutup rapat'],
@@ -20,7 +21,8 @@ const standards = [
     tag: 'Selama perjalanan',
     title: 'Tiga puluh hari kerja, tanpa perlu ditengok',
     desc: 'Masa efektif 30 hari sejak dibuka, dan hingga 45 hari pada kondisi penyimpanan ideal. Pelayaran ekspor yang menempuh 3–4 minggu selesai sebelum batas itu tercapai.',
-    image: '/images/buahsegar1.webp',
+    image: '/images/foto/standar-jalan.webp',
+    alt: 'Bak truk penuh jeruk dalam perjalanan',
     facts: [
       ['Masa efektif', '30 hari'],
       ['Kondisi ideal', '45 hari'],
@@ -31,7 +33,8 @@ const standards = [
     tag: 'Sampai di rak',
     title: 'Rasa, aroma, dan tekstur tidak tersentuh',
     desc: 'Sachet bekerja pada udara di sekelilingnya, bukan pada buahnya. Uji organoleptik tidak menemukan perbedaan rasa maupun tekstur antara komoditas yang diberi perlakuan dan yang tidak.',
-    image: '/images/buahsegar2.webp',
+    image: '/images/foto/standar-rak.webp',
+    alt: 'Rak pajang toko buah berisi jeruk, apel, dan buah naga',
     facts: [
       ['Kontak dengan pangan', 'Tidak ada'],
       ['Hasil terlihat', '24–48 jam'],
@@ -64,7 +67,7 @@ export default function Standards() {
               <figure className="relative aspect-[16/10] w-full overflow-hidden bg-bone-2 sm:aspect-[4/3]">
                 <Image
                   src={s.image}
-                  alt={s.title}
+                  alt={s.alt}
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"

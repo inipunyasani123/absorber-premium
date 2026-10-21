@@ -46,13 +46,13 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Gambar selebar bidang — dipotong 4:3 agar tanda air di sudut bawah tidak ikut */}
+      {/* Gambar selebar bidang */}
       <div className="relative z-10 mt-10 px-6 md:mt-14">
         <div className="mx-auto max-w-6xl">
           <div className="relative aspect-[4/3] w-full overflow-hidden bg-bone-2 sm:aspect-[16/9]">
             <Image
-              src="/images/etalase-sachet.webp"
-              alt="Sachet EthyleneAbsorber di antara anggur, blueberry, dan buah persik"
+              src="/images/foto/etalase-pisang.webp"
+              alt="Sisir-sisir pisang matang tersusun di atas papan kayu"
               fill
               priority
               sizes="100vw"
