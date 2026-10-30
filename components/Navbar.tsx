@@ -67,7 +67,7 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-[0.95rem] font-semibold tracking-tight text-ink">
+        <Link href="/" className="text-[0.95rem] font-semibold tracking-tight text-ink inline-flex min-h-11 items-center">
           Ethylene<span className="text-sage">Absorber</span>
         </Link>
 

@@ -37,7 +37,7 @@ export default async function CeritaPage({ params }: { params: Promise<{ slug: s
       <header className="pt-28 sm:pt-32">
         <div className="mx-auto max-w-6xl px-6">
           <nav aria-label="Remah roti" className="tag text-ink-soft">
-            <Link href="/catatan" className="hover:text-ink">Catatan Penerapan</Link> <span aria-hidden="true">/</span> {c.no}
+            <Link href="/catatan" className="hover:text-ink sentuh">Catatan Penerapan</Link> <span aria-hidden="true">/</span> {c.no}
           </nav>
           <h1 className="mt-8 max-w-4xl text-[2.5rem] leading-[1.03] font-semibold tracking-[-0.04em] text-ink sm:text-5xl lg:text-[3.8rem]">{c.judul}</h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">{c.ringkas}</p>

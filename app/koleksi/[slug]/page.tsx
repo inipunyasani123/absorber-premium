@@ -36,7 +36,7 @@ export default async function BarangPage({ params }: { params: Promise<{ slug: s
       <section className="relative bg-bone pt-28 pb-16 sm:pt-32 md:pb-24">
         <div className="mx-auto max-w-6xl px-6">
           <nav aria-label="Remah roti" className="tag mb-10 text-ink-soft">
-            <Link href="/koleksi" className="hover:text-ink">Etalase</Link> <span aria-hidden="true">/</span> {b.no}
+            <Link href="/koleksi" className="hover:text-ink sentuh">Etalase</Link> <span aria-hidden="true">/</span> {b.no}
           </nav>
           <div className="grid gap-10 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:gap-16">
             <div className="relative aspect-square overflow-hidden bg-bone-2">

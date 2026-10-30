@@ -64,7 +64,7 @@ export default function Method() {
 
           <Link
             href="/faq"
-            className="mt-10 inline-block text-sm font-semibold text-sage-soft underline-offset-8 hover:underline"
+            className="mt-10 inline-block text-sm font-semibold text-sage-soft underline-offset-8 hover:underline sentuh"
           >
             Pertanyaan teknis selengkapnya →
           </Link>

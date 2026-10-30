@@ -23,7 +23,7 @@ export default function Penerapan() {
             tag="Catatan Penerapan"
             title="Tiga tempat buah menunggu"
             action={
-              <Link href="/catatan" className="tag inline-block border-b border-ink pb-1 text-ink hover:text-sage">
+              <Link href="/catatan" className="tag inline-block border-b border-ink pb-1 text-ink hover:text-sage sentuh-x">
                 Baca tiga catatan lengkap
               </Link>
             }
@@ -60,7 +60,7 @@ export default function Penerapan() {
               </h2>
               <Link
                 href="/faq"
-                className="mt-8 inline-block text-sm font-semibold text-sage underline-offset-8 hover:underline"
+                className="mt-8 inline-block text-sm font-semibold text-sage underline-offset-8 hover:underline sentuh"
               >
                 Lihat semuanya →
               </Link>

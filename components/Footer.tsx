@@ -42,10 +42,10 @@ export default function Footer() {
 
           <nav aria-label="Navigasi footer">
             <h2 className="tag mb-5 text-bone">Navigasi</h2>
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:block sm:space-y-3">
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-0 sm:block sm:space-y-0">
               {nav.map((n) => (
                 <li key={n.href}>
-                  <Link href={n.href} className="text-sm transition-colors hover:text-sage-soft">
+                  <Link href={n.href} className="inline-flex min-h-11 items-center inline-flex min-h-11 items-center text-sm transition-colors hover:text-sage-soft">
                     {n.label}
                   </Link>
                 </li>
